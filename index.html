@@ -12,9 +12,11 @@
 <body>
   <div class="container" id="main-container">
     <h1>What Track is for you?</h1>
-    <button type="button" class="btn btn-default" id="start-button">Start</button>
+    <div id="intro">
+      <p><em>Epicodus</em> offers a few types of programming tracks throughout the year. Take this short survey to see which one might be best for you. Click start to begin.</p>
+      <button type="button" class="btn btn-default" id="start-button">Start</button>
+    </div>
     <div class="question-section">
-
       <div class="question1">
         <div class="panel panel-info">
           <div class="panel-heading">
@@ -33,13 +35,13 @@
       <div class="question2">
         <div class="panel panel-default">
           <div class="panel-heading">
-            QUESTION2QUESTION2QUESTION2QUESTION2QUESTION2QUESTION2QUESTION2
+            Which device do you use more?
           </div>
           <div class="panel-body">
             <form id="answer2">
-              <input type="radio" name="question2-result" checked="checked" value="A">Test A
-              <input type="radio" name="question2-result" value="B">Test B
-              <input type="radio" name="question2-result" value="C">Test C
+              <input type="radio" name="question2-result" checked="checked" value="A">Chromebook
+              <input type="radio" name="question2-result" value="B">Mac
+              <input type="radio" name="question2-result" value="C">Windows
               <input type="submit" value="Submit" id="question2-button">
             </form>
           </div>
@@ -112,24 +114,29 @@
   <div class="container" id="results-container">
     <div class="row">
       <div class="col-sm-4" id="java-track">
-        <h4>Java/Android Track</h4>
+        <h4><span class="clickable"><a href="https://www.epicodus.com/java">Java</a></span>/<span class="clickable"><a href="https://www.epicodus.com/android">Android</a></span> Track</h4>
         <img src="http://www.masonbruce.com/wp-content/uploads/2015/03/android-logo-transparent-background.png" alt="android logo">
-        <p>Erat lacus etiam morbi, fringilla eget et et vel, congue tempus, pretium class in vel, ipsum a quis morbi. Amet id nunc nullam integer, sodales orci modi vel. Mi lacus auctor vel mollis lectus. Integer semper sodales adipiscing mauris mattis pharetra
-          mauris vitae in expedita. Mollis dolor eu, nam posuere platea vehicula per rutrum vel, cursus magna metus, justo lacus quisque in sit sed taciti, tortor tellus convallis curabitur. Tempor magna placerat cras sapien amet.
-        </p>
+        <p>From Epicodus "Java is a programming language used to create dynamic web applications, applets within larger Web pages, and mobile Android applications. Students who learn java programming will be able to create dynamic web applications on their
+          computer. Most Java students also continue into our Android course, where they learn how to create mobile apps for Android devices." and "Android is a mobile operating system developed by Google, based on The Linux kernel and designed primarily
+          for touchscreen mobile devices such as smartphones and tablets. After launching 2003, Android is the most popular operating system and used for a variety of purposes, including running mobile apps, taking photos, sending messages, etc."
       </div>
       <div class="col-sm-4" id="drupal-track">
-        <h4>PHP/Drupal Track</h4>
-        <img src="http://www.masonbruce.com/wp-content/uploads/2015/03/android-logo-transparent-background.png" alt="android logo">
-        <p>Erat lacus etiam morbi, fringilla eget et et vel, congue tempus, pretium class in vel, ipsum a quis morbi. Amet id nunc nullam integer, sodales orci modi vel. Mi lacus auctor vel mollis lectus. Integer semper sodales adipiscing mauris mattis pharetra
-          mauris vitae in expedita. Mollis dolor eu, nam posuere platea vehicula per rutrum vel, cursus magna metus, justo lacus quisque in sit sed taciti, tortor tellus convallis curabitur. Tempor magna placerat cras sapien amet.
+        <h4><span class="clickable"><a href="https://www.epicodus.com/drupal">Drupal</a></span>/<span class="clickable"><a href="https://www.epicodus.com/php">PHP</a></span> Track</h4>
+        <img src="https://www.drupal.org/files/druplicon-small.png" alt="Drupal logo">
+        <p>From Epicodus "Drupal is content management software (CMS) that is used to create and manage various types of websites. It allows for easy content authoring, strong security, and consistent performance. Drupal modules extend its functionality,
+          while Drupal themes allow for customization of content presentation. Students who learn Drupal will be able to build structured and organized sites quickly and efficiently. PHP and Drupal are typically used to build content-focused websites.
+          Portland companies using PHP and Drupal who have hired Epicodus graduates include Intel, Metal Toad, and OpenSesame." and "PHP is a popular programming language used for web development within the confines of HTML. The PHP language can create
+          dynamic web page content or images used on websites or elsewhere. Students who learn to code in PHP will be able to collect form data, generate dynamic page content, send and receive cookies, and much more."
         </p>
       </div>
       <div class="col-sm-4" id="net-track">
-        <h4>C#/.NET Track</h4>
-        <img src="http://www.masonbruce.com/wp-content/uploads/2015/03/android-logo-transparent-background.png" alt="android logo">
-        <p>Erat lacus etiam morbi, fringilla eget et et vel, congue tempus, pretium class in vel, ipsum a quis morbi. Amet id nunc nullam integer, sodales orci modi vel. Mi lacus auctor vel mollis lectus. Integer semper sodales adipiscing mauris mattis pharetra
-          mauris vitae in expedita. Mollis dolor eu, nam posuere platea vehicula per rutrum vel, cursus magna metus, justo lacus quisque in sit sed taciti, tortor tellus convallis curabitur. Tempor magna placerat cras sapien amet.
+        <h4><span class="clickable"><a href="https://www.epicodus.com/c-sharp">C#</a></span>/<span class="clickable"><a href="https://www.epicodus.com/net">.NET</a></span> Track</h4>
+        <img src="http://www.asphostcentral.com/Images/logo_asp45.png" alt="MS dot NET logo">
+        <p>From Epicodus ".NET is a software framework developed by Microsoft and primarily used on Microsoft Windows. The .NET framework is used to create desktop, mobile, and web applications that run on various devices. It compiles and executes programs
+          written in the C# and Visual Basic languages. C# and .NET are typically used by large enterprises, government agencies, and companies serving enterprises and government clients." and "The C# (or C-sharp) programming language is one that enables
+          developers to build applications that run on the .NET framework. Students who are well-versed in C# programming can use it to create client applications, database applications, distributed components, and much more. Students who learn C# programming
+          and combine it with their knowledge of the .NET framework can target larger enterprises, government agencies, and companies serving enterprise and government clients for employment. Portland companies using C# and .NET who have hired Epicodus
+          graduates include Windsor and Incomm."
         </p>
       </div>
     </div>
