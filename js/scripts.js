@@ -1,0 +1,30 @@
+$(function(){
+  $("#start-button").click(function(){
+    $("#start-button").fadeOut("fast");
+    $(".question1").slideDown(1750);
+});
+  $("#question1-button").click(function(){
+    $(".question1").fadeOut("fast");
+    $(".question2").fadeIn(1750);
+});
+  $("#question2-button").click(function(){
+    $(".question2").fadeOut("fast");
+    $(".question3").fadeIn(1750);
+});
+  $("#question3-button").click(function(){
+    $(".question3").fadeOut("fast");
+    $(".question4").fadeIn(1750);
+});
+  $("#question4-button").click(function(){
+    $(".question4").fadeOut("fast");
+    $(".question5").fadeIn(1750);
+});
+  $("#question5-button").click(function(){
+    $(".question5").fadeOut("fast");
+    $(".question6").fadeIn(1750);
+});
+  $("#question6-button").click(function(){
+    $(".question6").fadeOut("fast");
+    $(".question1").fadeIn(1750);
+});
+})
