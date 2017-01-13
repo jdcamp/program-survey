@@ -1,8 +1,18 @@
-var results;
 $(document).ready(function() {
   var slideSpeed = 1000;
-  var resultsArray = [0, 0, 0]; //index 0, 1, 2 are # of A, B, C radio inputs selected respectively
+  var resultsArray = []; //index 0, 1, 2 are # of A, B, C radio inputs selected respectively
   var selectedAnswer = null;
+  var highlighResults = function(javaTrack, drupalTrack, netTrack) {
+    if (javaTrack === drupalTrack && javaTrack === netTrack){
+      ("#java-track").addClass("highlight-results")
+    } else if (javaTrack == drupalTrack) {
+
+    } else if (javaTrack == netTrack) {
+      
+    } else if (netTrack == drupalTrack) {
+
+    }
+  }
   var assignToArray = function(radioInput) { //reads input value to + 1 to an array index based on radio selection
     switch (radioInput) {
       case "A":
@@ -15,7 +25,6 @@ $(document).ready(function() {
         resultsArray[2] += 1;
         break;
       default: alert("error refresh page");
-
     }
   };
   $("form").submit(function(event) {
@@ -30,14 +39,14 @@ $(document).ready(function() {
     $(".question2").slideDown(slideSpeed);
     selectedAnswer = $("#answer1 input[type='radio']:checked").val();
     assignToArray(selectedAnswer);
-    alert(resultsArray);
+    //alert(resultsArray);
 });
   $("#question2-button").click(function(){
     $(".question2").slideUp(slideSpeed);
     $(".question3").slideDown(slideSpeed);
     selectedAnswer = $("#answer2 input[type='radio']:checked").val();
     assignToArray(selectedAnswer);
-    alert(resultsArray);
+    //alert(resultsArray);
 });
   $("#question3-button").click(function(){
     $(".question3").slideUp(slideSpeed);
@@ -66,6 +75,9 @@ $(document).ready(function() {
     selectedAnswer = $("#answer6 input[type='radio']:checked").val();
     assignToArray(selectedAnswer);
     alert(resultsArray);
+});
+  $("#results-button").click(function(){
+    $("#results-container").fadeIn();
 });
 
 })
