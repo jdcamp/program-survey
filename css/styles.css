@@ -1,14 +1,21 @@
 body {
-
+  background-image: url("https://subtlepatterns.com/patterns/ignasi_pattern_s.png");
 }
-.panel panel-default{
-  background-color: black;
+.container, #index-main-container{
+  background-color: whitesmoke;
+  margin-top: 20px;
+  border-radius: 10px;
+  padding-bottom: 20px;
 }
 .panel-body{
   background-color: gainsboro;
 }
 .question1 {
   display: none;
+}
+.panel h3 {
+  word-wrap: break-word;
+  width: 85%;
 }
 .question2 {
   display: none;
