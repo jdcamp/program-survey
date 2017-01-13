@@ -31,16 +31,11 @@ img {
 }
 
 .panel-body {
-  background-color: ghostwhite;
+  background-color: aliceblue;
 }
 
 .question1 {
   display: none;
-}
-
-.panel h3 {
-  word-wrap: break-word;
-  width: 85%;
 }
 
 .question2 {
@@ -66,4 +61,11 @@ img {
 .highlight-results {
   border: 2px solid lime;
   font-weight: bold;
+}
+
+input {
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: 100px;
+  margin-right: 100px;
 }
