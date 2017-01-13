@@ -1,7 +1,12 @@
-.question-panel .panel{
-  background-color: blue;
-}
+body {
 
+}
+.panel panel-default{
+  background-color: black;
+}
+.panel-body{
+  background-color: gainsboro;
+}
 .question1 {
   display: none;
 }
