@@ -1,15 +1,33 @@
 $(document).ready(function() {
   var slideSpeed = 1000;
-  var resultsArray = []; //index 0, 1, 2 are # of A, B, C radio inputs selected respectively
+  var resultsArray = [0,0,0]; //index 0, 1, 2 are # of A, B, C radio inputs selected respectively
   var selectedAnswer = null;
-  var highlighResults = function(javaTrack, drupalTrack, netTrack) {
+  var highlightResults = function(javaTrack, drupalTrack, netTrack) {
     if (javaTrack === drupalTrack && javaTrack === netTrack){
-      ("#java-track").addClass("highlight-results")
-    } else if (javaTrack == drupalTrack) {
+      $("#java-track").addClass("highlight-results");
+      $("#net-track").addClass("highlight-results");
+      $("#drupal-track").addClass("highlight-results");
+    } else if (javaTrack === drupalTrack && javaTrack > netTrack) {
+      $("#java-track").addClass("highlight-results");
+      $("#drupal-track").addClass("highlight-results");
 
-    } else if (javaTrack == netTrack) {
-      
-    } else if (netTrack == drupalTrack) {
+    } else if (javaTrack === netTrack && javaTrack > drupalTrack) {
+      $("#net-track").addClass("highlight-results");
+      $("#java-track").addClass("highlight-results");
+
+    } else if (netTrack === drupalTrack && netTrack > javaTrack) {
+      $("#drupal-track").addClass("highlight-results");
+      $("#net-track").addClass("highlight-results");
+
+    } else if (javaTrack > drupalTrack && javaTrack > netTrack) {
+      $("#java-track").addClass("highlight-results");
+      alert(resultsArray);
+
+    } else if (netTrack > drupalTrack && netTrack > javaTrack) {
+      $("#net-track").addClass("highlight-results");
+
+    } else /*(drupalTrack > javaTrack && drupalTrack > netTrack)*/ {
+      $("#drupal-track").addClass("highlight-results");
 
     }
   }
@@ -46,14 +64,12 @@ $(document).ready(function() {
     $(".question3").slideDown(slideSpeed);
     selectedAnswer = $("#answer2 input[type='radio']:checked").val();
     assignToArray(selectedAnswer);
-    //alert(resultsArray);
 });
   $("#question3-button").click(function(){
     $(".question3").slideUp(slideSpeed);
     $(".question4").slideDown(slideSpeed);
     selectedAnswer = $("#answer3 input[type='radio']:checked").val();
     assignToArray(selectedAnswer);
-    alert(resultsArray);
 
 });
   $("#question4-button").click(function(){
@@ -61,23 +77,23 @@ $(document).ready(function() {
     $(".question5").slideDown(slideSpeed);
     selectedAnswer = $("#answer4 input[type='radio']:checked").val();
     assignToArray(selectedAnswer);
-    alert(resultsArray);
 });
   $("#question5-button").click(function(){
     $(".question5").slideUp(slideSpeed);
     $(".question6").slideDown(slideSpeed);
     selectedAnswer = $("#answer5 input[type='radio']:checked").val();
     assignToArray(selectedAnswer);
-    alert(resultsArray);
 });
   $("#question6-button").click(function(){
     $(".question6").slideUp(slideSpeed);
     selectedAnswer = $("#answer6 input[type='radio']:checked").val();
     assignToArray(selectedAnswer);
-    alert(resultsArray);
+    $("#results-button").fadeIn();
+
 });
   $("#results-button").click(function(){
     $("#results-container").fadeIn();
+    highlightResults(resultsArray[0], resultsArray[1], resultsArray[2]);
 });
 
 })

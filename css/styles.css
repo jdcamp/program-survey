@@ -6,9 +6,6 @@ img {
   float: left;
   height: 75px;
 }
-.highlight-results {
-  border: 2px solid lime;
-}
 #main-container {
   margin-top: 20px;
   border-radius: 10px;
@@ -16,6 +13,9 @@ img {
   background: white;
 }
 #results-container {
+  display: none;
+}
+#results-button {
   display: none;
 }
 .panel-body{
@@ -49,4 +49,9 @@ img {
 input {
   text-align: left;
   border: 3px solid black;
+}
+
+.highlight-results {
+  border: 2px solid lime;
+  font-weight: bold;
 }
