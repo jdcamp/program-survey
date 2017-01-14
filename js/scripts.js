@@ -54,7 +54,6 @@ $(document).ready(function() {
     $(".question2").slideDown(slideSpeed);
     selectedAnswer = $("#answer1 input[type='radio']:checked").val();
     assignToArray(selectedAnswer);
-    //alert(resultsArray);
   });
   $("#question2-button").click(function() {
     $(".question2").slideUp(slideSpeed);
